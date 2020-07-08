@@ -1,4 +1,4 @@
-package com.michael.g.tournie.ui.notifications
+package com.michael.g.tournie.ui.team
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,7 +21,7 @@ class TeamsFragment : Fragment() {
     ): View? {
         teamsViewModel =
                 ViewModelProviders.of(this).get(TeamsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        val root = inflater.inflate(R.layout.fragment_teams, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
         teamsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

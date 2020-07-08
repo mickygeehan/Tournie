@@ -31,13 +31,13 @@
 
     <fragment
             android:id="@+id/navigation_tournament"
-            android:name="com.michael.g.tournie.ui.dashboard.TournamentFragment"
+            android:name="com.michael.g.tournie.ui.tournament.TournamentFragment"
             android:label="@string/title_tournament"
             tools:layout="@layout/fragment_tournament"/>
 
     <fragment
             android:id="@+id/navigation_teams"
-            android:name="com.michael.g.tournie.ui.notifications.TeamsFragment"
+            android:name="com.michael.g.tournie.ui.team.TeamsFragment"
             android:label="@string/title_teams"
-            tools:layout="@layout/fragment_notifications"/>
+            tools:layout="@layout/fragment_teams"/>
 </navigation>

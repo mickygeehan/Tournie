@@ -1,13 +1,13 @@
-package com.michael.g.tournie.ui.dashboard
+package com.michael.g.tournie.ui.team
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class TournamentViewModel : ViewModel() {
+class TeamsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is notifications Fragment"
     }
     val text: LiveData<String> = _text
 }

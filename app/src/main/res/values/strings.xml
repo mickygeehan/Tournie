@@ -11,6 +11,6 @@
     <string name="intro_shown_key">Intro_Shown</string>
     <string name="title_tournament">Tournaments</string>
     <string name="title_teams">Teams</string>
-
+    <string name="tournament_create_a_tournament">Create a tournament</string>
     <string name="home_second">Home Second</string>
 </resources>
