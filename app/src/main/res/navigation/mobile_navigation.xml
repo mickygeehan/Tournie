@@ -30,14 +30,14 @@
     </fragment>
 
     <fragment
-            android:id="@+id/navigation_dashboard"
-            android:name="com.michael.g.tournie.ui.dashboard.DashboardFragment"
-            android:label="@string/title_dashboard"
-            tools:layout="@layout/fragment_dashboard"/>
+            android:id="@+id/navigation_tournament"
+            android:name="com.michael.g.tournie.ui.dashboard.TournamentFragment"
+            android:label="@string/title_tournament"
+            tools:layout="@layout/fragment_tournament"/>
 
     <fragment
-            android:id="@+id/navigation_notifications"
-            android:name="com.michael.g.tournie.ui.notifications.NotificationsFragment"
-            android:label="@string/title_notifications"
+            android:id="@+id/navigation_teams"
+            android:name="com.michael.g.tournie.ui.notifications.TeamsFragment"
+            android:label="@string/title_teams"
             tools:layout="@layout/fragment_notifications"/>
 </navigation>

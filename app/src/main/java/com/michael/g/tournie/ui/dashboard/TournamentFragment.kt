@@ -1,4 +1,4 @@
-package com.michael.g.tournie.ui.notifications
+package com.michael.g.tournie.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.michael.g.tournie.R
 
-class NotificationsFragment : Fragment() {
+class TournamentFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var tournamentViewModel: TournamentViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        tournamentViewModel =
+                ViewModelProviders.of(this).get(TournamentViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_tournament, container, false)
+        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        tournamentViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
