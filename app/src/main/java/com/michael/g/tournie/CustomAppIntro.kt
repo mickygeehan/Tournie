@@ -40,9 +40,9 @@ class CustomAppIntro : AppIntro() {
     }
 
     private fun introShown() {
-        val sharedPref = getSharedPreferences("Shared_File",Context.MODE_PRIVATE) ?: return
+        val sharedPref = getSharedPreferences(getString(R.string.shared_preferences_file_key),Context.MODE_PRIVATE) ?: return
         with (sharedPref.edit()) {
-            putBoolean("introShown", true)
+            putBoolean(getString(R.string.intro_shown_key), true)
             commit()
         }
     }

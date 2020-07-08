@@ -8,6 +8,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="shared_preferences_file_key">Shared_File</string>
+    <string name="intro_shown_key">Intro_Shown</string>
 
     <string name="home_second">Home Second</string>
 </resources>
