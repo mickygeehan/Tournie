@@ -5,25 +5,38 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tournament.TournamentFragment" android:background="#56638A">
-    <ImageButton
-            android:src="@drawable/baseline_add_circle_outline_black_24dp"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:layout_width="89dp"
-            android:tint="@color/touch_selector"
-            android:layout_height="70dp" android:id="@+id/createTournamentBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="TODO" app:layout_constraintVertical_bias="0.874"
-            android:layout_marginBottom="8dp"/>
+        tools:context=".ui.tournament.TournamentFragment" android:background="#FFFFFF">
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/createTournamentBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"/>
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="right|center_vertical"
+            android:background="#5e6170"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteX="0dp"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/linearLayout">
+
+        <ImageButton
+                android:src="@drawable/baseline_add_circle_outline_black_24dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:layout_width="50dp"
+                android:tint="@color/touch_selector"
+                android:layout_height="match_parent" android:id="@+id/createTournamentBtn"
+                android:contentDescription="TODO"
+                tools:layout_editor_absoluteY="484dp" tools:layout_editor_absoluteX="150dp"/>
+        <TextView
+                android:text="New Tournament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView" android:padding="10dp"
+                android:textAlignment="textStart" android:textStyle="bold"
+                android:fontFamily="@font/open_sans_light" android:textColor="#000000" android:textSize="18sp"/>
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
