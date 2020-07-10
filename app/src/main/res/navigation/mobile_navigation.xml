@@ -5,6 +5,7 @@
             android:id="@+id/mobile_navigation"
             app:startDestination="@+id/navigation_home">
 
+<!--    Main Screens    -->
     <fragment
             android:id="@+id/navigation_home"
             android:name="com.michael.g.tournie.ui.home.HomeFragment"
@@ -15,6 +16,25 @@
                 android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
                 app:destination="@id/navigation_home_second"/>
     </fragment>
+
+    <fragment
+            android:id="@+id/navigation_tournament"
+            android:name="com.michael.g.tournie.ui.tournament.TournamentFragment"
+            android:label="@string/title_tournament"
+            tools:layout="@layout/fragment_tournament">
+
+        <action
+                android:id="@+id/action_TournamentFragment_to_CreateTournamentFragment"
+                app:destination="@id/navigation_create_tournament"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigation_teams"
+            android:name="com.michael.g.tournie.ui.team.TeamsFragment"
+            android:label="@string/title_teams"
+            tools:layout="@layout/fragment_teams"/>
+
+<!--    Going to Screens    -->
     <fragment
             android:id="@+id/navigation_home_second"
             android:name="com.michael.g.tournie.ui.home.HomeSecondFragment"
@@ -30,14 +50,14 @@
     </fragment>
 
     <fragment
-            android:id="@+id/navigation_tournament"
-            android:name="com.michael.g.tournie.ui.tournament.TournamentFragment"
-            android:label="@string/title_tournament"
-            tools:layout="@layout/fragment_tournament"/>
+        android:id="@+id/navigation_create_tournament"
+        android:name="com.michael.g.tournie.ui.tournament.CreateTournamentFragment"
+        android:label="Create Tournie"
+        tools:layout="@layout/fragment_create_tournament">
 
-    <fragment
-            android:id="@+id/navigation_teams"
-            android:name="com.michael.g.tournie.ui.team.TeamsFragment"
-            android:label="@string/title_teams"
-            tools:layout="@layout/fragment_teams"/>
+        <action
+                android:id="@+id/action_CreateTournamentFragment_to_TournamentFragment"
+                app:destination="@id/navigation_tournament"/>
+
+    </fragment>
 </navigation>

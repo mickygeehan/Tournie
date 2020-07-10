@@ -6,15 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.michael.g.tournie.R
+import com.michael.g.tournie.ui.home.HomeFragmentDirections
 import kotlinx.android.synthetic.main.fragment_tournament.*
-import android.widget.ListAdapter as ListAdapter1
 
 class TournamentFragment : Fragment() {
 
@@ -29,16 +30,26 @@ class TournamentFragment : Fragment() {
         tournamentViewModel =
                 ViewModelProviders.of(this).get(TournamentViewModel::class.java)
         animation = AnimationUtils.loadAnimation(context, R.anim.zoom_out)
-        val root = inflater.inflate(R.layout.fragment_tournament, container, false)
-        val createTournamentBtn = root.findViewById<ImageButton>(R.id.createTournamentBtn)
-        createTournamentBtn.setOnClickListener{
-            createTournamentBtn.startAnimation(animation)
-        }
-        return root
+        return inflater.inflate(R.layout.fragment_tournament, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val navOptions: NavOptions = NavOptions.Builder()
+            .setEnterAnim(R.anim.fragment_fade_enter)
+            .setExitAnim(R.anim.fragment_fade_exit)
+            .setPopEnterAnim(R.anim.fragment_open_enter)
+            .setPopExitAnim(R.anim.fragment_open_exit).build()
+
+
+        view.findViewById<View>(R.id.createTournamentBtn).setOnClickListener{
+            createTournamentBtn.startAnimation(animation)
+            val action = TournamentFragmentDirections.actionTournamentFragmentToCreateTournamentFragment()
+
+            NavHostFragment.findNavController(this@TournamentFragment).navigate(action, navOptions)
+        }
 
         listRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity)

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Create Tournament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:hint="Team names here plz"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:textSize="30sp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp" android:textStyle="bold"
+                android:textAllCaps="false" android:typeface="normal"/>
+
+<!--        <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:id="@+id/border"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView2"-->
+<!--                android:background="@android:color/darker_gray"/>-->
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_drawable"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp">
+
+            <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/editText4"
+                    android:src="@drawable/baseline_save_black_24dp" android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:layout_margin="20dp"
+                    android:hint="Tournament Name"
+                    android:id="@+id/editText4"
+                    android:fontFamily="@font/open_sans_light"
+                    android:textSize="30sp"/>
+            <CheckBox
+                    android:text="Home / Away Fixtures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2"
+                    android:layout_below="@+id/editText4"
+                    android:layoutDirection="rtl"
+                    android:fontFamily="@font/open_sans_light"
+                    android:textSize="18sp" android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"/>
+            <TextView
+                    android:text="Number Of Rounds: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:layout_below="@+id/checkBox2"
+                    android:textSize="18sp" android:fontFamily="@font/open_sans_light" android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="4"
+                    android:id="@+id/editText6"
+                    android:layout_toRightOf="@+id/textView8"
+                    android:layout_alignBottom="@+id/textView8"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Teams here please"
+                    android:inputType="textMultiLine"
+                    android:layout_below="@+id/textView8"
+                    android:layout_margin="20dp"
+                    android:ems="10"
+                    android:id="@+id/editText7"/>
+
+        </RelativeLayout>
+
+<!--        <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/textView6" tools:layout_editor_absoluteY="145dp"-->
+<!--                tools:layout_editor_absoluteX="76dp"-->
+<!--        android:hint="Tournamet Name"/>-->
+<!--        <TextView-->
+<!--                android:text="Number Of Rounds"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/textView7" tools:layout_editor_absoluteY="195dp"-->
+<!--                tools:layout_editor_absoluteX="80dp"/>-->
+<!--        <EditText-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="number"-->
+<!--                android:ems="2"-->
+<!--                android:id="@+id/editText3" tools:layout_editor_absoluteY="177dp"-->
+<!--                tools:layout_editor_absoluteX="222dp"/>-->
+<!--        <CheckBox-->
+<!--                android:text="Home / Away Fixtures"-->
+<!--                android:layoutDirection="rtl"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/checkBox" tools:layout_editor_absoluteY="258dp"-->
+<!--                tools:layout_editor_absoluteX="77dp" android:fontFamily="@font/open_sans_light"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"android:layout_marginBottom="10dp">-->
+
+
+<!--        <TextView-->
+<!--                android:text="Create Tournament"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/textView2"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:fontFamily="@font/open_sans_light"-->
+<!--                android:textSize="30sp"/>-->
+
+<!--        <TextView-->
+<!--                android:text="TextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/textView4"-->
+<!--                android:layout_alignBottom="@+id/textView2" android:layout_marginBottom="-60dp"/>-->
+
+
+<!--    </RelativeLayout>-->
+</ScrollView>
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <RelativeLayout android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <TextView-->
+<!--                android:text="Create Tournament"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/textView2"-->
+<!--                android:fontFamily="@font/open_sans_light"-->
+<!--                android:textSize="30sp"-->
+<!--                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="60dp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    </ScrollView>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:context=".ui.tournament.CreateTournamentFragment"-->
+<!--    >-->
+<!--        <TextView-->
+<!--                android:text="Create Tournament"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/textView2"-->
+<!--                android:fontFamily="@font/open_sans_light" android:textSize="30sp"-->
+<!--                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="60dp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
+<!--        <Button-->
+<!--                android:text="Button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/button"-->
+<!--                android:layout_marginTop="69dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginEnd="152dp"/>-->
+<!--        <Button-->
+<!--                android:text="Button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/button2"-->
+<!--                android:layout_marginTop="87dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/button" app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginEnd="133dp"/>-->
+<!--        <Button-->
+<!--                android:text="Button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" android:id="@+id/button3"-->
+<!--                android:layout_marginTop="85dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/button2" app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginEnd="130dp"/>-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
