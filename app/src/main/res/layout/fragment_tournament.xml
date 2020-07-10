@@ -11,14 +11,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:scrollbars="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/relative_layout">
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout" app:layout_constraintTop_toTopOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="#5e6170"
-            android:id="@+id/relative_layout" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/relative_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
         <Switch
                 android:text="Ongoing"
@@ -28,9 +29,10 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 tools:layout_editor_absoluteY="346dp"
-                tools:layout_editor_absoluteX="90dp" android:gravity="center_vertical" android:paddingLeft="10dp"/>
+                tools:layout_editor_absoluteX="90dp" android:gravity="center_vertical" android:paddingLeft="10dp"
+                android:fontFamily="@font/open_sans_light"/>
         <ImageButton
-                android:src="@drawable/baseline_add_circle_outline_black_24dp"
+                android:src="@drawable/baseline_add_black_24dp"
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:layout_width="50dp"
